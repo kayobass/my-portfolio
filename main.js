@@ -23,6 +23,8 @@ i18next
 function App() {
   const { t, i18n } = ReactI18next.useTranslation();
 
+  const [menuOpen, setMenuOpen] = React.useState(false);
+
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
   };
@@ -68,7 +70,19 @@ function App() {
       id: 2,
       nameKey: "lang_en_name",
       levelKey: "lang_en_level",
-      percentage: 20,
+      percentage: 33,
+    },
+  ];
+
+  const courses = [
+    {
+      id: 1,
+      titleKey: "course1_title",
+      descKey: "course1_desc",
+      durationKey: "course1_duration",
+      yearKey: "course1_year",
+      authorKey: "course1_author",
+      linkKey: "course1_link",
     },
   ];
 
@@ -78,6 +92,16 @@ function App() {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/kayoaruj/",
       icon: "🔗",
+    },
+    {
+      name: "Youtube",
+      url: "https://www.youtube.com/@kayobass",
+      icon: "▶️",
+    },
+    {
+      name: "Instagram",
+      url: "https://www.instagram.com/kayobasss/",
+      icon: "📸",
     },
     {
       name: "E-mail",
@@ -110,31 +134,61 @@ function App() {
       ),
       React.createElement(
         "nav",
-        { className: "nav-menu" },
-        React.createElement("a", { href: "#about" }, t("menu_about")),
-        React.createElement("a", { href: "#stacks" }, t("menu_stacks")),
-        React.createElement("a", { href: "#projects" }, t("menu_projects")),
+        { className: `nav-menu${menuOpen ? " open" : ""}` },
         React.createElement(
           "a",
-          { href: "#professional" },
+          { href: "#about", onClick: () => setMenuOpen(false) },
+          t("menu_about"),
+        ),
+        React.createElement(
+          "a",
+          { href: "#stacks", onClick: () => setMenuOpen(false) },
+          t("menu_stacks"),
+        ),
+        React.createElement(
+          "a",
+          { href: "#projects", onClick: () => setMenuOpen(false) },
+          t("menu_projects"),
+        ),
+        React.createElement(
+          "a",
+          { href: "#professional", onClick: () => setMenuOpen(false) },
           t("menu_professional"),
         ),
-        React.createElement("a", { href: "#academic" }, t("menu_academic")),
-        React.createElement("a", { href: "#contact" }, t("menu_contact")),
+        React.createElement(
+          "a",
+          { href: "#academic", onClick: () => setMenuOpen(false) },
+          t("menu_academic"),
+        ),
+        React.createElement(
+          "a",
+          { href: "#courses", onClick: () => setMenuOpen(false) },
+          t("courses_title"),
+        ),
+        React.createElement(
+          "a",
+          { href: "#contact", onClick: () => setMenuOpen(false) },
+          t("menu_contact"),
+        ),
       ),
       React.createElement(
-        "div",
-        { className: "lang-toggle" },
-        React.createElement(
-          "button",
-          { onClick: () => changeLanguage("pt") },
-          "PT 🇧🇷",
-        ),
-        React.createElement(
-          "button",
-          { onClick: () => changeLanguage("en") },
-          "EN 🇬🇧",
-        ),
+        "button",
+        {
+          className: "hamburger-btn",
+          onClick: () => setMenuOpen(!menuOpen),
+          "aria-label": menuOpen ? "Close menu" : "Open menu",
+        },
+        React.createElement("span", null),
+        React.createElement("span", null),
+        React.createElement("span", null),
+      ),
+      React.createElement(
+        "button",
+        {
+          className: "lang-toggle",
+          onClick: () => changeLanguage(i18n.language === "pt" ? "en" : "pt"),
+        },
+        `${i18n.language === "pt" ? "EN" : "PT"} ${i18n.language === "pt" ? "🇬🇧" : "🇧🇷"}`,
       ),
     ),
 
@@ -162,7 +216,7 @@ function App() {
       ),
     ),
 
-    // Seção Stacks
+    // Seção Stacks (skills)
     React.createElement(
       "section",
       { id: "stacks" },
@@ -192,6 +246,7 @@ function App() {
       ),
     ),
 
+    // Seção Projects
     React.createElement(
       "section",
       { id: "projects" },
@@ -315,6 +370,62 @@ function App() {
       ),
     ),
 
+    // Seção Cursos e Certificações
+    React.createElement(
+      "section",
+      { id: "courses" },
+      React.createElement(
+        "h2",
+        { className: "section-title" },
+        t("courses_title"),
+      ),
+      React.createElement(
+        "div",
+        null,
+        courses.map((course) =>
+          React.createElement(
+            "div",
+            { key: course.id, className: "course-card" },
+            React.createElement(
+              "div",
+              { className: "course-header" },
+              React.createElement(
+                "h3",
+                { className: "course-title" },
+                t(course.titleKey),
+              ),
+              React.createElement(
+                "div",
+                { className: "course-meta" },
+                t(course.authorKey),
+              ),
+              React.createElement(
+                "div",
+                { className: "course-details" },
+                `${t(course.durationKey)} • ${t(course.yearKey)}`,
+              ),
+            ),
+            React.createElement(
+              "p",
+              { className: "course-desc" },
+              t(course.descKey),
+            ),
+            React.createElement(
+              "a",
+              {
+                href: t(course.linkKey),
+                target: "_blank",
+                rel: "noopener noreferrer",
+                className: "cert-link",
+              },
+              `📄 ${t("view_certificate")}`,
+            ),
+          ),
+        ),
+      ),
+    ),
+
+    // Seção Idiomas
     React.createElement(
       "section",
       { id: "languages" },

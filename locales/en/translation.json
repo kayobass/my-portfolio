@@ -26,8 +26,16 @@
   "menu_stacks": "Stacks",
   "stacks_title": "My Stacks",
   "languages_title": "Languages",
+  "courses_title": "Certifications",
+  "view_certificate": "View Certificate",
+  "course1_title": "Introduction to Object-Oriented Programming",
+  "course1_desc": "An introductory course on the fundamental concepts of Object-Oriented Programming (OOP): classes, objects, inheritance, encapsulation, and polymorphism.",
+  "course1_duration": "5 hours",
+  "course1_year": "2026",
+  "course1_author": "Bradesco Foundation",
+  "course1_link": "https://raw.githubusercontent.com/kayobass/certificates/main/bradesco_poo.pdf",
   "lang_pt_name": "Portuguese",
   "lang_pt_level": "Native",
   "lang_en_name": "English",
-  "lang_en_level": "Basic"
+  "lang_en_level": "Elementary"
 }

@@ -26,8 +26,16 @@
   "menu_stacks": "Stacks",
   "stacks_title": "Minhas Stacks",
   "languages_title": "Idiomas",
+  "courses_title": "Certificações",
+  "view_certificate": "Ver Certificado",
+  "course1_title": "Introdução à Programação Orientada a Objetos",
+  "course1_desc": "Curso introdutório sobre os conceitos fundamentais da Programação Orientada a Objetos (POO): classes, objetos, herança, encapsulamento e polimorfismo.",
+  "course1_duration": "5 horas",
+  "course1_year": "2026",
+  "course1_author": "Fundação Bradesco",
+  "course1_link": "https://raw.githubusercontent.com/kayobass/certificates/main/bradesco_poo.pdf",
   "lang_pt_name": "Português",
   "lang_pt_level": "Nativo",
   "lang_en_name": "Inglês",
-  "lang_en_level": "Básico"
+  "lang_en_level": "Elementar"
 }
