@@ -37,6 +37,18 @@ function App() {
       image: "./assets/project1.png",
       projectUrl: "https://kayobass.github.io/guess-country/",
       codeUrl: "https://github.com/kayobass/guess-country",
+      hasProjectLink: true,
+      hasCodeLink: true,
+    },
+    {
+      id: 2,
+      titleKey: "proj2_title",
+      descKey: "proj2_desc",
+      image: "./assets/project2.png",
+      projectUrl: "",
+      codeUrl: "https://github.com/kayobass/hangman_game_tkinter",
+      hasProjectLink: false,
+      hasCodeLink: true,
     },
   ];
 
@@ -75,6 +87,15 @@ function App() {
   ];
 
   const courses = [
+    {
+      id: 2,
+      titleKey: "course2_title",
+      descKey: "course2_desc",
+      durationKey: "course2_duration",
+      yearKey: "course2_year",
+      authorKey: "course2_author",
+      linkKey: "course2_link",
+    },
     {
       id: 1,
       titleKey: "course1_title",
@@ -286,20 +307,24 @@ function App() {
               React.createElement(
                 "a",
                 {
-                  href: proj.projectUrl,
-                  target: "_blank",
-                  rel: "noopener noreferrer",
-                  className: "btn btn-primary",
+                  href: proj.hasProjectLink ? proj.projectUrl : undefined,
+                  target: proj.hasProjectLink ? "_blank" : undefined,
+                  rel: proj.hasProjectLink ? "noopener noreferrer" : undefined,
+                  className: `btn btn-primary${proj.hasProjectLink ? "" : " disabled"}`,
+                  "aria-disabled": proj.hasProjectLink ? undefined : "true",
+                  tabIndex: proj.hasProjectLink ? undefined : -1,
                 },
                 `🌐 ${t("project_link")}`,
               ),
               React.createElement(
                 "a",
                 {
-                  href: proj.codeUrl,
-                  target: "_blank",
-                  rel: "noopener noreferrer",
-                  className: "btn btn-secondary",
+                  href: proj.hasCodeLink ? proj.codeUrl : undefined,
+                  target: proj.hasCodeLink ? "_blank" : undefined,
+                  rel: proj.hasCodeLink ? "noopener noreferrer" : undefined,
+                  className: `btn btn-secondary${proj.hasCodeLink ? "" : " disabled"}`,
+                  "aria-disabled": proj.hasCodeLink ? undefined : "true",
+                  tabIndex: proj.hasCodeLink ? undefined : -1,
                 },
                 `🐙 ${t("code_link")}`,
               ),

@@ -358,6 +358,18 @@ section {
   transform: translateY(-2px);
 }
 
+.btn.disabled {
+  opacity: 0.4;
+  pointer-events: none;
+  cursor: not-allowed;
+  user-select: none;
+}
+
+.btn.disabled:hover {
+  transform: none;
+}
+
+
 /* Responsivo */
 @media (max-width: 680px) {
   .container {
