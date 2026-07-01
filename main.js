@@ -34,6 +34,7 @@ function App() {
       id: 1,
       titleKey: "proj1_title",
       descKey: "proj1_desc",
+      tagsKey: "proj1_tags",
       image: "./assets/project1.png",
       projectUrl: "https://kayobass.github.io/guess-country/",
       codeUrl: "https://github.com/kayobass/guess-country",
@@ -44,6 +45,7 @@ function App() {
       id: 2,
       titleKey: "proj2_title",
       descKey: "proj2_desc",
+      tagsKey: "proj2_tags",
       image: "./assets/project2.png",
       projectUrl: "",
       codeUrl: "https://github.com/kayobass/hangman_game_tkinter",
@@ -95,6 +97,7 @@ function App() {
       yearKey: "course2_year",
       authorKey: "course2_author",
       linkKey: "course2_link",
+      tagsKey: "course2_tags",
     },
     {
       id: 1,
@@ -104,6 +107,7 @@ function App() {
       yearKey: "course1_year",
       authorKey: "course1_author",
       linkKey: "course1_link",
+      tagsKey: "course1_tags",
     },
   ];
 
@@ -285,48 +289,68 @@ function App() {
             { key: proj.id, className: "card" },
             React.createElement(
               "div",
-              { className: "project-title-container" },
+              { className: "project-image-container" },
               React.createElement("img", {
                 src: proj.image,
                 alt: t(proj.titleKey),
-                className: "project-thumb",
+                className: "project-image",
                 onError: (e) => {
-                  e.target.src = "https://via.placeholder.com/40x40?text=Proj";
+                  e.target.src =
+                    "https://via.placeholder.com/400x200?text=Projeto";
                 },
               }),
+            ),
+            React.createElement(
+              "div",
+              { className: "project-info" },
               React.createElement(
                 "h3",
                 { className: "project-title" },
                 t(proj.titleKey),
               ),
-            ),
-            React.createElement("p", null, t(proj.descKey)),
-            React.createElement(
-              "div",
-              { className: "project-buttons" },
+              React.createElement("p", null, t(proj.descKey)),
+              t(proj.tagsKey, { returnObjects: true }) &&
+                t(proj.tagsKey, { returnObjects: true }).length > 0 &&
+                React.createElement(
+                  "div",
+                  { className: "tags-container" },
+                  t(proj.tagsKey, { returnObjects: true }).map((tag, index) =>
+                    React.createElement(
+                      "span",
+                      { key: index, className: "tag" },
+                      tag,
+                    ),
+                  ),
+                ),
               React.createElement(
-                "a",
-                {
-                  href: proj.hasProjectLink ? proj.projectUrl : undefined,
-                  target: proj.hasProjectLink ? "_blank" : undefined,
-                  rel: proj.hasProjectLink ? "noopener noreferrer" : undefined,
-                  className: `btn btn-primary${proj.hasProjectLink ? "" : " disabled"}`,
-                  "aria-disabled": proj.hasProjectLink ? undefined : "true",
-                  tabIndex: proj.hasProjectLink ? undefined : -1,
-                },
-                `🌐 ${t("project_link")}`,
-              ),
-              React.createElement(
-                "a",
-                {
-                  href: proj.hasCodeLink ? proj.codeUrl : undefined,
-                  target: proj.hasCodeLink ? "_blank" : undefined,
-                  rel: proj.hasCodeLink ? "noopener noreferrer" : undefined,
-                  className: `btn btn-secondary${proj.hasCodeLink ? "" : " disabled"}`,
-                  "aria-disabled": proj.hasCodeLink ? undefined : "true",
-                  tabIndex: proj.hasCodeLink ? undefined : -1,
-                },
-                `🐙 ${t("code_link")}`,
+                "div",
+                { className: "project-buttons" },
+                React.createElement(
+                  "a",
+                  {
+                    href: proj.hasProjectLink ? proj.projectUrl : undefined,
+                    target: proj.hasProjectLink ? "_blank" : undefined,
+                    rel: proj.hasProjectLink
+                      ? "noopener noreferrer"
+                      : undefined,
+                    className: `btn btn-primary${proj.hasProjectLink ? "" : " disabled"}`,
+                    "aria-disabled": proj.hasProjectLink ? undefined : "true",
+                    tabIndex: proj.hasProjectLink ? undefined : -1,
+                  },
+                  `🌐 ${t("project_link")}`,
+                ),
+                React.createElement(
+                  "a",
+                  {
+                    href: proj.hasCodeLink ? proj.codeUrl : undefined,
+                    target: proj.hasCodeLink ? "_blank" : undefined,
+                    rel: proj.hasCodeLink ? "noopener noreferrer" : undefined,
+                    className: `btn btn-secondary${proj.hasCodeLink ? "" : " disabled"}`,
+                    "aria-disabled": proj.hasCodeLink ? undefined : "true",
+                    tabIndex: proj.hasCodeLink ? undefined : -1,
+                  },
+                  `🐙 ${t("code_link")}`,
+                ),
               ),
             ),
           ),
@@ -334,6 +358,7 @@ function App() {
       ),
     ),
 
+    // Seção Professional
     React.createElement(
       "section",
       { id: "professional" },
@@ -365,6 +390,7 @@ function App() {
       ),
     ),
 
+    // Seção Academic
     React.createElement(
       "section",
       { id: "academic" },
@@ -435,6 +461,19 @@ function App() {
               { className: "course-desc" },
               t(course.descKey),
             ),
+            t(course.tagsKey, { returnObjects: true }) &&
+              t(course.tagsKey, { returnObjects: true }).length > 0 &&
+              React.createElement(
+                "div",
+                { className: "tags-container" },
+                t(course.tagsKey, { returnObjects: true }).map((tag, index) =>
+                  React.createElement(
+                    "span",
+                    { key: index, className: "tag" },
+                    tag,
+                  ),
+                ),
+              ),
             React.createElement(
               "a",
               {
@@ -493,6 +532,7 @@ function App() {
       ),
     ),
 
+    // Seção Contact
     React.createElement(
       "section",
       { id: "contact" },
@@ -520,6 +560,7 @@ function App() {
       ),
     ),
 
+    // Footer
     React.createElement(
       "footer",
       null,

@@ -78,7 +78,7 @@ header {
 
 /* Seções */
 section {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
 
 .section-title {
@@ -92,8 +92,8 @@ section {
 
 /* Cards */
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -106,6 +106,11 @@ section {
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  flex: 1 1 280px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .card:hover {
@@ -114,20 +119,28 @@ section {
   border-color: var(--red-soft);
 }
 
-.project-title-container {
-  display: flex;
-  align-items: center;
-  gap: 0.85rem;
-  margin-bottom: 0.85rem;
+.project-image-container {
+  margin: -1.75rem -1.75rem 1.25rem -1.75rem;
+  overflow: hidden;
+  border-radius: 20px 20px 0 0;
 }
 
-.project-thumb {
-  width: 64px;
-  height: 64px;
+.project-image {
+  width: 100%;
+  height: 180px;
   object-fit: cover;
-  border-radius: 8px;
-  border: 1px solid var(--border-light);
-  flex-shrink: 0;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .project-image {
+  transform: scale(1.05);
+}
+
+.project-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .card h3 {
@@ -316,7 +329,8 @@ section {
 .project-buttons {
   display: flex;
   gap: 1rem;
-  margin-top: 1.5rem;
+  margin-top: auto;
+  padding-top: 1rem;
 }
 
 .btn {
@@ -444,7 +458,7 @@ footer {
   gap: 2.5rem;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
   background: var(--card-bg);
   border-radius: 32px;
   padding: 2rem;
@@ -641,4 +655,31 @@ footer {
   color: var(--red-soft);
   border-color: var(--red-soft);
   background: rgba(139, 42, 42, 0.4);
+}
+
+/* Tags sutis para projetos e certificações */
+.tags-container {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.tag {
+  font-size: 0.75rem;
+  color: var(--beige-muted);
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  background: rgba(230, 213, 179, 0.08);
+  border: 1px solid rgba(230, 213, 179, 0.12);
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition: all 0.2s ease;
+}
+
+.tag:hover {
+  background: rgba(230, 213, 179, 0.15);
+  border-color: rgba(230, 213, 179, 0.2);
+  color: var(--beige);
 }
