@@ -147,7 +147,7 @@ section {
   font-size: 1.325rem; /* Aumentado em +2px para melhor leitura */
   font-weight: 500;
   color: #ffffff;
-  margin: 0;
+  margin: 0 0 0.5rem;
   line-height: 1.3;
 }
 
