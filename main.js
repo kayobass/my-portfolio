@@ -42,6 +42,17 @@ function App() {
       hasCodeLink: true,
     },
     {
+      id: 3,
+      titleKey: "proj3_title",
+      descKey: "proj3_desc",
+      tagsKey: "proj3_tags",
+      image: "./assets/project3.png",
+      projectUrl: "",
+      codeUrl: "https://github.com/kayobass/drawable-app",
+      hasProjectLink: false,
+      hasCodeLink: true,
+    },
+    {
       id: 2,
       titleKey: "proj2_title",
       descKey: "proj2_desc",
