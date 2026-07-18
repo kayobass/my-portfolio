@@ -683,3 +683,30 @@ footer {
   border-color: rgba(230, 213, 179, 0.2);
   color: var(--beige);
 }
+
+/* Scroll to top button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--red-deep);
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(139, 42, 42, 0.4);
+  transition: all 0.3s ease;
+  z-index: 90;
+}
+
+.scroll-top-btn:hover {
+  background: var(--red-soft);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(139, 42, 42, 0.5);
+}

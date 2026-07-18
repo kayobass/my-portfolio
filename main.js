@@ -24,6 +24,19 @@ function App() {
   const { t, i18n } = ReactI18next.useTranslation();
 
   const [menuOpen, setMenuOpen] = React.useState(false);
+  const [showScrollTop, setShowScrollTop] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
@@ -577,5 +590,16 @@ function App() {
       null,
       `© ${new Date().getFullYear()} — ${t("footer_text")}`,
     ),
+
+    showScrollTop &&
+      React.createElement(
+        "button",
+        {
+          className: "scroll-top-btn",
+          onClick: scrollToTop,
+          "aria-label": "Voltar ao topo",
+        },
+        "\u2191",
+      ),
   );
 }
