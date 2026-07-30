@@ -581,13 +581,21 @@ footer {
 }
 
 /* Cursos e Certificações */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
 .course-card {
   background: var(--card-bg);
   backdrop-filter: blur(2px);
   border: 1px solid var(--border-light);
-  border-radius: 16px;
-  padding: 1.5rem;
-  margin-bottom: 1.2rem;
+  border-radius: 12px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
   transition: all 0.3s ease;
 }
 
@@ -597,43 +605,92 @@ footer {
   box-shadow: var(--shadow);
 }
 
-.course-header {
-  margin-bottom: 0.5rem;
+.course-main {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
 .course-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--beige);
-  margin: 0;
-}
-
-.course-meta {
-  font-size: 0.85rem;
-  color: var(--red-soft);
-  font-weight: 500;
-  margin-top: 0.25rem;
-}
-
-.course-author {
   font-size: 1rem;
   font-weight: 600;
   color: var(--beige);
-  margin-top: 0.25rem;
+  margin: 0;
+  line-height: 1.3;
 }
 
-.course-details {
-  font-size: 0.85rem;
+.course-author {
+  font-size: 0.8rem;
+  font-weight: 600;
   color: var(--red-soft);
-  font-weight: 500;
-  margin-top: 0.25rem;
+  margin: 0;
 }
 
 .course-desc {
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--beige-muted);
-  line-height: 1.5;
-  margin: 0.75rem 0;
+  line-height: 1.45;
+  margin: 0.25rem 0 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.course-side {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.course-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.course-meta-item {
+  font-size: 0.75rem;
+  color: var(--beige-muted);
+  background: rgba(139, 42, 42, 0.15);
+  padding: 0.2rem 0.55rem;
+  border-radius: 20px;
+  border: 1px solid var(--border-light);
+}
+
+.cert-link {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--beige-muted);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.35rem 0.85rem;
+  border-radius: 40px;
+  border: 1px solid var(--border-light);
+  background: rgba(139, 42, 42, 0.2);
+  transition: all 0.2s ease;
+}
+
+.cert-link:hover {
+  color: var(--red-soft);
+  border-color: var(--red-soft);
+  background: rgba(139, 42, 42, 0.4);
+}
+
+@media (max-width: 900px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cert-link {

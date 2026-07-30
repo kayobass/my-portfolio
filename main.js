@@ -466,14 +466,14 @@ function App() {
       ),
       React.createElement(
         "div",
-        null,
+        { className: "courses-grid" },
         courses.map((course) =>
           React.createElement(
             "div",
             { key: course.id, className: "course-card" },
             React.createElement(
               "div",
-              { className: "course-header" },
+              { className: "course-main" },
               React.createElement(
                 "h3",
                 { className: "course-title" },
@@ -481,42 +481,56 @@ function App() {
               ),
               React.createElement(
                 "div",
-                { className: "course-meta" },
+                { className: "course-author" },
                 t(course.authorKey),
               ),
               React.createElement(
-                "div",
-                { className: "course-details" },
-                `${t(course.durationKey)} • ${t(course.yearKey)}`,
+                "p",
+                { className: "course-desc" },
+                t(course.descKey),
               ),
             ),
             React.createElement(
-              "p",
-              { className: "course-desc" },
-              t(course.descKey),
-            ),
-            t(course.tagsKey, { returnObjects: true }) &&
-              t(course.tagsKey, { returnObjects: true }).length > 0 &&
+              "div",
+              { className: "course-side" },
               React.createElement(
                 "div",
-                { className: "tags-container" },
-                t(course.tagsKey, { returnObjects: true }).map((tag, index) =>
-                  React.createElement(
-                    "span",
-                    { key: index, className: "tag" },
-                    tag,
-                  ),
+                { className: "course-meta" },
+                React.createElement(
+                  "span",
+                  { className: "course-meta-item" },
+                  `📅 ${t(course.yearKey)}`,
+                ),
+                React.createElement(
+                  "span",
+                  { className: "course-meta-item" },
+                  `⏱ ${t(course.durationKey)}`,
                 ),
               ),
-            React.createElement(
-              "a",
-              {
-                href: t(course.linkKey),
-                target: "_blank",
-                rel: "noopener noreferrer",
-                className: "cert-link",
-              },
-              `📄 ${t("view_certificate")}`,
+              t(course.tagsKey, { returnObjects: true }) &&
+                t(course.tagsKey, { returnObjects: true }).length > 0 &&
+                React.createElement(
+                  "div",
+                  { className: "tags-container" },
+                  t(course.tagsKey, { returnObjects: true }).map(
+                    (tag, index) =>
+                      React.createElement(
+                        "span",
+                        { key: index, className: "tag" },
+                        tag,
+                      ),
+                  ),
+                ),
+              React.createElement(
+                "a",
+                {
+                  href: t(course.linkKey),
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  className: "cert-link",
+                },
+                `📄 ${t("view_certificate")}`,
+              ),
             ),
           ),
         ),
