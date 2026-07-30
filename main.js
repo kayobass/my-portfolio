@@ -114,6 +114,16 @@ function App() {
 
   const courses = [
     {
+      id: 3,
+      titleKey: "course3_title",
+      descKey: "course3_desc",
+      durationKey: "course3_duration",
+      yearKey: "course3_year",
+      authorKey: "course3_author",
+      linkKey: "course3_link",
+      tagsKey: "course3_tags",
+    },
+    {
       id: 2,
       titleKey: "course2_title",
       descKey: "course2_desc",
