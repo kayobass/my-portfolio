@@ -175,6 +175,10 @@ function App() {
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     },
     {
+      name: "Sql",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
+    },
+    {
       name: "Git",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     },
@@ -512,13 +516,12 @@ function App() {
                 React.createElement(
                   "div",
                   { className: "tags-container" },
-                  t(course.tagsKey, { returnObjects: true }).map(
-                    (tag, index) =>
-                      React.createElement(
-                        "span",
-                        { key: index, className: "tag" },
-                        tag,
-                      ),
+                  t(course.tagsKey, { returnObjects: true }).map((tag, index) =>
+                    React.createElement(
+                      "span",
+                      { key: index, className: "tag" },
+                      tag,
+                    ),
                   ),
                 ),
               React.createElement(
