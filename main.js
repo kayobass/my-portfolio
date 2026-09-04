@@ -65,17 +65,6 @@ function App() {
       hasProjectLink: false,
       hasCodeLink: true,
     },
-    {
-      id: 2,
-      titleKey: "proj2_title",
-      descKey: "proj2_desc",
-      tagsKey: "proj2_tags",
-      image: "./assets/project2.png",
-      projectUrl: "",
-      codeUrl: "https://github.com/kayobass/hangman_game_tkinter",
-      hasProjectLink: false,
-      hasCodeLink: true,
-    },
   ];
 
   const professionalExp = [
@@ -175,6 +164,10 @@ function App() {
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
     },
     {
+      name: "Pandas",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg",
+    },
+    {
       name: "Sql",
       logo: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg",
     },
@@ -193,7 +186,7 @@ function App() {
       React.createElement(
         "div",
         { className: "logo" },
-        React.createElement("h1", null, "Kayo Araujo | AI"),
+        React.createElement("h1", null, "Kayo Araujo"),
       ),
       React.createElement(
         "nav",
