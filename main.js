@@ -44,6 +44,17 @@ function App() {
 
   const projects = [
     {
+      id: 2,
+      titleKey: "proj2_title",
+      descKey: "proj2_desc",
+      tagsKey: "proj2_tags",
+      image: "./assets/project2.png",
+      projectUrl: "",
+      codeUrl: "https://github.com/kayobass/instagram-engagement-analysis",
+      hasProjectLink: false,
+      hasCodeLink: true,
+    },
+    {
       id: 1,
       titleKey: "proj1_title",
       descKey: "proj1_desc",
