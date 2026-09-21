@@ -44,6 +44,18 @@ function App() {
 
   const projects = [
     {
+      id: 4,
+      titleKey: "proj4_title",
+      descKey: "proj4_desc",
+      tagsKey: "proj4_tags",
+      image: "./assets/project4.png",
+      projectUrl:
+        "https://discord.com/oauth2/authorize?client_id=1501777296950825121&permissions=4506247475616960&integration_type=0&scope=bot",
+      codeUrl: "https://github.com/kayobass/xilove",
+      hasProjectLink: true,
+      hasCodeLink: true,
+    },
+    {
       id: 2,
       titleKey: "proj2_title",
       descKey: "proj2_desc",
@@ -146,7 +158,11 @@ function App() {
   ];
 
   const socials = [
-    { name: "GitHub", url: "https://github.com/kayobass", icon: "🐙" },
+    {
+      name: "GitHub",
+      url: "https://github.com/kayobass",
+      icon: "🐙",
+    },
     {
       name: "LinkedIn",
       url: "https://www.linkedin.com/in/kayoaruj/",
