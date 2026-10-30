@@ -44,6 +44,17 @@ function App() {
 
   const projects = [
     {
+      id: 5,
+      titleKey: "proj5_title",
+      descKey: "proj5_desc",
+      tagsKey: "proj5_tags",
+      image: "./assets/project5.png",
+      projectUrl: "https://compemonn.streamlit.app/",
+      codeUrl: "https://github.com/kayobass/compemon",
+      hasProjectLink: true,
+      hasCodeLink: true,
+    },
+    {
       id: 4,
       titleKey: "proj4_title",
       descKey: "proj4_desc",

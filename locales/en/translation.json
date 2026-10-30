@@ -2,19 +2,29 @@
   "about_title": "About Me",
   "about_text1": "I'm a Python developer focused on Data and Artificial Intelligence. I'm passionate about transforming data into valuable insights and building solutions driven by analytics, automation, and AI.",
   "about_text2": "I'm currently in the second semester of an Artificial Intelligence degree, where I'm deepening my knowledge of Python, SQL, data analysis, data engineering, and AI applications. I'm committed to continuous learning through study and hands-on projects, building a solid foundation for a professional career in the fields of Data and Artificial Intelligence.",
+
   "projects_title": "Projects",
+
   "proj1_title": "Guess the Country",
   "proj1_desc": "An interactive game where the player tries to guess a secret country using progressive hints. Features both a terminal and a web version.",
   "proj1_tags": ["Python", "HTML/CSS", "JavaScript", "API"],
+
   "proj2_title": "Instagram Engagement Analysis",
   "proj2_desc": "An exploratory analysis of a brand's Instagram posts, evaluating content formats, tags, and strategic combinations to identify what drives likes and comments.",
   "proj2_tags": ["Python", "Pandas"],
+
   "proj3_title": "Drawable App",
   "proj3_desc": "A graphical application for creating and manipulating simple vector drawings, similar to Paint.",
   "proj3_tags": ["Python", "Tkinter", "Pickle", "MVC"],
+
   "proj4_title": "XiloVê — Analytics Bot for Discord",
   "proj4_desc": "Bot that transforms server activity into metrics: reports by period, 7×24 hourly heatmap, member ranking, week-over-week comparison, and automatic weekly report. Architecture with ingestion buffer, PostgreSQL, and idempotent scheduling.",
   "proj4_tags": ["Python", "Discord.py", "Pandas", "Matplotlib", "PostgreSQL"],
+
+  "proj5_title": "Compémon: A Pokémon Comparator",
+  "proj5_desc": "Interactive application for comparing Pokémon attributes through tables and charts. Fetches data from the PokéAPI and displays stat differences and visualizations to make comparisons easier.",
+  "proj5_tags": ["Python", "Streamlit", "Pandas", "Matplotlib", "PokéAPI"],
+
   "professional_title": "Professional Career",
   "job1_title": "No Professional Experience",
   "job1_company": "2026",

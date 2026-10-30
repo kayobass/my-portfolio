@@ -2,28 +2,42 @@
   "about_title": "Sobre Mim",
   "about_text1": "Sou desenvolvedor Python com foco em Dados e Inteligência Artificial. Tenho interesse em transformar dados em informações úteis e construir soluções baseadas em análise, automação e IA.",
   "about_text2": "Estou cursando o 2º período de Inteligência Artificial, onde venho aprofundando meus conhecimentos em Python, SQL, análise de dados, engenharia de dados e aplicações de IA. Busco constantemente evoluir por meio de estudos e projetos práticos, construindo uma base sólida para atuar profissionalmente nas áreas de Dados e Inteligência Artificial.",
+
   "projects_title": "Projetos",
+
   "proj1_title": "Adivinhe o País",
   "proj1_desc": "Um jogo interativo onde o jogador tenta adivinhar um país secreto utilizando dicas progressivas. Possui versão de terminal e versão web.",
   "proj1_tags": ["Python", "HTML/CSS", "JavaScript", "API"],
+
   "proj2_title": "Análise de Engajamento no Instagram",
   "proj2_desc": "Uma análise exploratória de postagens de uma marca, avaliando formatos de conteúdo, tags e combinações estratégicas para identificar o que impulsiona curtidas e comentários.",
   "proj2_tags": ["Python", "Pandas"],
+
   "proj3_title": "Aplicativo de Desenho",
   "proj3_desc": "Uma aplicação gráfica destinada à criação e manipulação de desenhos vetoriais simples, semelhante ao Paint.",
   "proj3_tags": ["Python", "Tkinter", "Pickle", "MVC"],
+
   "proj4_title": "XiloVê — Bot de Analytics para Discord",
   "proj4_desc": "Bot que transforma a atividade de um servidor em métricas: relatórios por período, heatmap horário 7×24, ranking de membros, comparação semana-a-semana e relatório semanal automático.",
   "proj4_tags": ["Python", "Discord.py", "Pandas", "Matplotlib", "PostgreSQL"],
+
+  "proj5_title": "Compémon: Um Comparador de Pokémon",
+  "proj5_desc": "Aplicação interativa que permite comparar atributos de diferentes Pokémon por meio de tabelas e gráficos. Consome dados da PokéAPI e apresenta diferenças de status e visualizações para facilitar a análise.",
+  "proj5_tags": ["Python", "Streamlit", "Pandas", "Matplotlib", "PokéAPI"],
+
   "professional_title": "Carreira Profissional",
+
   "job1_title": "Nenhuma Experiência Profissional",
   "job1_company": "2026",
   "job1_period": "2026",
   "job1_desc": "",
+
   "academic_title": "Carreira Acadêmica",
+
   "academic1_degree": "Bacharelado em Inteligência Artificial",
   "academic1_inst": "Universidade Federal de Sergipe",
   "academic1_year": "2026 - Presente",
+
   "social_title": "Redes & Contato",
   "footer_text": "Kayobass - Dados • IA",
   "menu_about": "Sobre",
@@ -38,6 +52,7 @@
   "languages_title": "Idiomas",
   "courses_title": "Certificações",
   "view_certificate": "Certificado",
+
   "course1_title": "Introdução à Programação Orientada a Objetos",
   "course1_desc": "Curso introdutório sobre conceitos fundamentais como classes, objetos, herança, encapsulamento e polimorfismo.",
   "course1_duration": "5 horas",
@@ -45,6 +60,7 @@
   "course1_author": "Fundação Bradesco",
   "course1_link": "https://raw.githubusercontent.com/kayobass/certificates/main/bradesco_poo.pdf",
   "course1_tags": ["POO"],
+
   "course2_title": "Python para Análise e Automação de Dados",
   "course2_desc": "Bootcamp com projetos práticos de análise de dados, automação de planilhas, construção de gráficos e desenvolvimento de um assistente virtual com IA.",
   "course2_duration": "55 horas",
@@ -52,6 +68,7 @@
   "course2_author": "DIO | Accenture",
   "course2_link": "https://raw.githubusercontent.com/kayobass/certificates/main/accenture_analise_dados.png",
   "course2_tags": ["Pandas", "NumPy", "Matplotlib", "SQL", "IA"],
+
   "course3_title": "CS50P - Introdução à Programação com Python",
   "course3_desc": "Introdução prática à programação em Python, abrangendo desde fundamentos e lógica até a resolução de problemas reais.",
   "course3_duration": "30 horas",
@@ -59,6 +76,7 @@
   "course3_author": "Universidade Harvard",
   "course3_link": "https://raw.githubusercontent.com/kayobass/certificates/main/harvard_cs50p_python.pdf",
   "course3_tags": ["Python", "POO", "Lógica"],
+
   "lang_pt_name": "Português",
   "lang_pt_level": "Nativo",
   "lang_en_name": "Inglês",
